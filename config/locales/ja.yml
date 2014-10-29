@@ -1,0 +1,50 @@
+ja:
+  title: "Title"
+  content: "Content"
+  media_user_info: "Media user info"
+  device_id: "Device ID"
+  id: "ID"
+  edit: "Edit"
+  show: "Show JP"
+  destroy: "Destroy"
+  confirmation: "Are you sure ?"
+  search: "Search"
+  from: "From"
+  to: "To"
+  user_id: "User ID"
+  login_date_time: "Login Date Time"
+  bonus: "Bonus"
+  navigation_bar:
+    news_index: "List news"
+    create_news: "Create new news"
+    users_index: "List users"
+    login_histories_index: "List login histories"
+  views:
+    labels:
+      create: 登録する
+      submit: 保存する
+      update: 更新する
+    select:
+      prompt: 選択してください
+  errors:
+    messages:
+      not_enough_point: "Not enough point to exchange"
+  navigation:
+    home: "ADWAYS SERVER"
+    list:
+      name: "List"
+      news: "News"
+      users: "Users"
+      login_histories: "Login histories"
+    create_new:
+      name: "Create New"
+      news: "Create new News"
+      kitty_words: "Create new Kitty Word"
+    user_name:
+      name: "User name"
+      sign_out: "Signout"
+  admin:
+    users:
+      index:
+        total_exchange_today: "Total Exchange today"
+        exchange_by_month: "Total Exchange by month"

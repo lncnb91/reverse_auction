@@ -1,0 +1,17 @@
+<%= form_for [:admin, @user], class: "form-horizontal", role:"form" do |f| %>
+  <div class="errors"><%= render partial: "errors", locals: { object: @user } %></div>
+  <table class="table table-bordered">
+    <tr>
+      <th width="100px"><%= f.label User.h(:user_name) %></th>
+      <td width="200px">
+        <%= f.text_field :user_name, placeholder: User.h(:user_name) %></td>
+    </tr>
+    <tr>
+      <th><%= f.label User.h(:remaining_gold) %></th>
+      <td>
+        <%= f.text_field :remaining_gold, placeholder: User.h(:remaining_gold) %></td>
+    </tr>
+    </tr>
+  </table>
+  <%= f.submit class: "btn btn-success" %>
+<% end %>

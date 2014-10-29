@@ -1,0 +1,17 @@
+<%= search_form_for @q, url: admin_users_path, class: "form-horizontal", role:"form" do |f| %>
+  <div class="clear-both">
+    <table class="table table-bordered table-search">
+      <tr>
+        <th><%= User.h :user_name %></td>
+        <td><%= f.text_field :user_name_cont, placeholder: User.h(:user_name), class: "search_input" %></td>
+      </tr>
+      <tr>
+        <td colspan="2" style="text-align: center;">
+          <div class="form_btn">
+            <%= f.submit "Search", class: "btn btn-success" %>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+<% end %>

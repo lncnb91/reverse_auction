@@ -1,0 +1,28 @@
+<%= form_for [:admin, @news], class: "form-horizontal", role:"form" do |f| %>
+  <div class="errors"><%= render partial: "errors", locals: { object: @news } %></div>
+  <table class="table table-bordered">
+    <tr>
+      <th width="100px"><%= f.label News.h(:public_from) %></th>
+      <td width="200px">
+        <%= f.text_field :public_from, placeholder: News.h(:public_from), class: "datetimepicker" %></td>
+    </tr>
+    <tr>
+      <th><%= f.label News.h(:public_until) %></th>
+      <td>
+        <%= f.text_field :public_until, placeholder: News.h(:public_until), class: "datetimepicker" %></td>
+    </tr>
+    <tr>
+      <th><%= f.label News.h(:title) %></th>
+      <td>
+        <%= f.text_field :title, placeholder: News.h(:title) %></td>
+      </td>
+    </tr>
+    <tr>
+      <th><%= f.label News.h(:content) %></th>
+      <td>
+        <%= f.text_area :content, placeholder: News.h(:content), class: "ckeditor" %></td>
+      </td>
+    </tr>
+  </table>
+  <%= f.submit class: "btn btn-success" %>
+<% end %>

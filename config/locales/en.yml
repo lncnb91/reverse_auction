@@ -1,0 +1,94 @@
+en:
+  title: "Title"
+  content: "Content"
+  media_user_info: "Media user info"
+  device_id: "Device ID"
+  id: "ID"
+  edit: "Edit"
+  show: "Show"
+  destroy: "Destroy"
+  confirmation: "Are you sure ?"
+  search: "Search"
+  from: "From"
+  to: "To"
+  user_id: "User ID"
+  login_date_time: "Login Date Time"
+  bonus: "Bonus"
+  logout: "Logout"
+  success: "Success"
+  public_from: "Public from"
+  public_until: "Public until"
+  android: "Android"
+  ios: "iOS"
+  navigation_bar:
+    news_index: "List news"
+    create_news: "Create new news"
+    users_index: "List users"
+    login_histories_index: "List login histories"
+  views:
+    labels:
+      create: "Create"
+      submit: "Submit"
+      update: "Edit"
+    select:
+      prompt: "Choose one"
+  errors:
+    messages:
+      exchange_point_insufficient: "Not enough point to exchange"
+      gift_item_point_insufficient: "Not enough point for Gift item"
+      record_not_found: "Record not found"
+      information_incorrect: "Information incorrect"
+      token_expired: "Access token expired"
+      token_invalid: "Access token invalid"
+      can_not_create_user: "Can not create user"
+      can_not_update_user: "Can not update user"
+      can_not_update_kitty: "Can not update kitty"
+    create_news: "Create new"
+    news: "News"
+    users: "Users"
+    login_histories: "Login histories"
+  navigation:
+    home: "ADWAYS SERVER"
+    list:
+      name: "List"
+    create_new:
+      name: "Create New"
+    user_name:
+      name: "User name"
+  admin:
+    users:
+      index:
+        total_exchange_today: "Total Exchange today"
+        exchange_by_month: "Total Exchange by month"
+  devise:
+    sessions:
+      admin:
+        signed_in: "Signed in successfully"
+        sign_in_error: "Information incorrect"
+  page_title:
+    common_qa:
+      edit: "Edit common question answer"
+      list: "Common question answer list"
+      create: "Create common question answer"
+    exchange:
+      list: "List exchanges"
+      detail: "Exchange detail"
+    kitty:
+      detail: "Kitty_detail"
+    login_history:
+      list: "List login histories"
+    news:
+      edit: "Edit news"
+      list: "List news"
+      create: "Create news"
+      detail: "News detai"
+    probability:
+      edit: "Edit probabilities"
+      detail: "Daily game bonus probability"
+    qa:
+      edit: "Edit question answer"
+      list: "List question answer"
+    user:
+      edit: "Edit user"
+      list: "List users"
+      create: "Create user"

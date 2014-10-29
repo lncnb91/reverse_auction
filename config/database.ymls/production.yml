@@ -1,0 +1,11 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  socket: /var/run/mysqld/mysqld.sock
+
+production:
+  <<: *default
+  database: reverse_auction_dev
+  username: root
+  password: "Qw8TirvRX9"

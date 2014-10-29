@@ -1,0 +1,17 @@
+<% menus.each do |label, list| %>
+  <li id="fat-menu" class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+      <%= t "navigation.#{label}.name" %><b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <% list.each do |content| %>
+        <%   case content.class.name %>
+        <%   when Array.name %>
+            <li class="li-dropdown-menu"><%= link_to t("navigation.#{content[0]}"), content[1].call, content[2] %></li>
+        <%   when Symbol.name %>
+          <li class="divider"></li>
+        <%   end %>
+      <% end %>
+    </ul>
+  </li>
+<% end %>

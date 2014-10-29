@@ -1,0 +1,12 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="navbar-inner navbar-inner-customize">
+    <div class="container wrap-header wrap-header-customize">
+      <%= link_to t("navigation.home"), '/', id: "logo" %>
+      <nav>
+        <ul class="nav pull-right">
+          <%= render partial: "layouts/header_menu", locals: {menus: admin_menus} %>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>

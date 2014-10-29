@@ -1,0 +1,11 @@
+<% if object && object.errors.any? %>
+  <div>
+    <% object.errors.messages.each do |attr, _| %>
+      <p class="modFtRed errors-msg">
+         <% object.errors.full_messages_for(attr).uniq.each do |msg| %>
+           <%= msg %>
+        <% end %>
+      </p>
+    <% end %>
+  </div>
+<% end %>

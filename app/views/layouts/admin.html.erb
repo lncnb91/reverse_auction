@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <%= stylesheet_link_tag "admin", media: "all" %>
+    <%= javascript_include_tag "admin"%>
+    <%= csrf_meta_tags %>
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div id="wrap">
+      <%= render 'layouts/header' %>
+      <selection>
+        <% if notice %>
+          <p class="alert alert-notice"><%= notice %></p>
+        <% end %>
+        <div>
+          <title><%= full_title(yield(:title)) %></title>
+          <h2><%= full_title(yield(:title)) %></h2>
+          <%= yield %>
+        </div>
+      </selection>
+    </div><!--/wrap-->
+  </body>
+</html>

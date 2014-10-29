@@ -1,0 +1,23 @@
+ja:
+  activemodel:
+    errors:
+  activerecord:
+    messages:
+      successful:
+        created: "%{model} created"
+        updated: "%{model} updated"
+    errors:
+      messages:
+        record_invalid: "Invalid record"
+    models:
+    attributes:
+      exchange:
+        user_id: "User ja"
+        gift_item_id: "Gift Item ja"
+        point: "Point ja"
+        created_at: "Created At ja"
+      kitty_word:
+        name: "Name"
+        level: "Level"
+        word: "Word"
+        memo: "Memo"

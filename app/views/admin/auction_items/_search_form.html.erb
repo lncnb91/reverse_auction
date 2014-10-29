@@ -1,0 +1,21 @@
+<%= search_form_for @q, url: admin_auction_items_path, class: "form-horizontal", role:"form" do |f| %>
+  <div class="clear-both">
+    <table class="table table-bordered table-search">
+      <tr>
+        <th><%= AuctionItem.h :item_name %></td>
+        <td><%= f.text_field :item_name_cont, placeholder: AuctionItem.h(:item_name), class: "search_input" %></td>
+      </tr>
+      <tr>
+        <th><%= AuctionItem.h :auction_date %></td>
+        <td><%= f.text_field :auction_date, placeholder: AuctionItem.h(:auction-date), class: "search_input datetimepicker" %></td>
+      </tr>
+      <tr>
+        <td colspan="2" style="text-align: center;">
+          <div class="form_btn">
+            <%= f.submit "Search", class: "btn btn-success" %>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+<% end %>
