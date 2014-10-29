@@ -3,12 +3,7 @@ class Admin::UsersController < Admin::BaseController
   before_action :set_object, only: [:edit, :update, :destroy]
 
   def index
-    params[:q].present? && params[:created_at_month_cont].present?
     @q = User.search params[:q]
-    time_now = Time.now
-    @exchange_by_month =
-      Exchange.exchange_by_month(params[:created_at] || time_now.strftime("%Y-%m")).sum(:point)
-    @today_exchange = Exchange.today_exchange(time_now.strftime("%Y-%m-d")).sum(:point)
     @users = @q.result
   end
 

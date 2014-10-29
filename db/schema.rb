@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 20141028235536) do
 
   create_table "auction_items", force: true do |t|
     t.string   "item_name"
+    t.date     "auction_date"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -66,7 +67,8 @@ ActiveRecord::Schema.define(version: 20141028235536) do
   end
 
   create_table "users", primary_key: "user_id", force: true do |t|
-    t.integer  "remained_point", default: 0
+    t.string   "user_name"
+    t.integer  "remaining_gold", default: 0
     t.integer  "play_count"
     t.datetime "created_at"
     t.datetime "updated_at"

@@ -1,0 +1,28 @@
+<% provide(:title, (I18n.t :list, scope: [:page_title, :charge_log])) %>
+<div class="well">
+  <%= render "search_form" %>
+</div>
+
+<table class="table table-striped table-bordered table-hover table-responsive">
+  <tr class="success">
+    <th><%= ChargeLog.h(:user_name) %></th>
+    <th><%= ChargeLog.h(:charged_gold) %></th>
+    <th><%= ChargeLog.h(:charged_at) %></th>
+    <th></th>
+    <th></th>
+  </tr>
+  <% @charge_logs.each do |charge_log| %>
+    <tr>
+      <td><%= charge_log.user.user_name %></td>
+      <td><%= charge_log.charged_gold %></td>
+      <td><%= charge_log.created_at %></td>
+      <td><%= link_to I18n.t(:edit), edit_admin_charge_log_path(charge_log) %> </td>
+      <td>
+        <%= link_to I18n.t(:destroy),
+          admin_charge_log_path(charge_log),
+          method: :delete,
+          data: {confirm: I18n.t(:confirmation)} %>
+      </td>
+    </tr>
+  <% end %>
+</table>

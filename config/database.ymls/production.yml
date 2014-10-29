@@ -6,6 +6,6 @@ default: &default
 
 production:
   <<: *default
-  database: adways_server
+  database: reverse_auction_dev
   username: root
   password: "Qw8TirvRX9"

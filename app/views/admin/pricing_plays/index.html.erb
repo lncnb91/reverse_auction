@@ -1,0 +1,19 @@
+<% provide(:title, (I18n.t :list, scope: [:page_title, :pricing_play])) %>
+<div class="well">
+  <%= render "search_form" %>
+</div>
+
+<table class="table table-striped table-bordered table-hover table-responsive">
+  <tr class="success">
+    <th><%= PricingPlay.h(:user) %></th>
+    <th><%= PricingPlay.h(:auction_item) %></th>
+    <th><%= PricingPlay.h(:set_price) %></th>
+  </tr>
+  <% @pricing_plays.each do |pricing_play| %>
+    <tr>
+      <td><%= pricing_play.user.user_name %></td>
+      <td><%= pricing_play.auction_item.item_name %></td>
+      <td><%= pricing_play.set_price %></td>
+    </tr>
+  <% end %>
+</table>

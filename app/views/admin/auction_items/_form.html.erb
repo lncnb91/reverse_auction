@@ -1,0 +1,16 @@
+<%= form_for [:admin, @auction_item], class: "form-horizontal", role:"form" do |f| %>
+  <div class="errors"><%= render partial: "errors", locals: { object: @auction_item } %></div>
+  <table class="table table-bordered">
+    <tr>
+      <th width="100px"><%= f.label AuctionItem.h(:item_name) %></th>
+      <td width="200px">
+        <%= f.text_field :item_name, placeholder: AuctionItem.h(:item_name) %></td>
+    </tr>
+    <tr>
+      <th><%= f.label AuctionItem.h(:auction_date) %></th>
+      <td>
+        <%= f.text_field :auction_date, placeholder: AuctionItem.h(:auction_date), class: "datetimepicker" %></td>
+    </tr>
+  </table>
+  <%= f.submit class: "btn btn-success" %>
+<% end %>

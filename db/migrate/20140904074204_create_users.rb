@@ -3,7 +3,8 @@ class CreateUsers < ActiveRecord::Migration
     create_table :users, :id => false do |t|
 
       t.integer :user_id, :limit => 8
-      t.integer :remained_point, default: 0
+      t.string :user_name
+      t.integer :remaining_gold, default: 0
       t.integer :play_count
       t.timestamps
     end

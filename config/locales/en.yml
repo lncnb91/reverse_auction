@@ -1,4 +1,5 @@
 en:
+  sign_in: "Sign in"
   title: "Title"
   content: "Content"
   media_user_info: "Media user info"
@@ -48,7 +49,7 @@ en:
     users: "Users"
     login_histories: "Login histories"
   navigation:
-    home: "ADWAYS SERVER"
+    home: "REVERSE AUCTION SERVER"
     list:
       name: "List"
     create_new:
@@ -66,29 +67,15 @@ en:
         signed_in: "Signed in successfully"
         sign_in_error: "Information incorrect"
   page_title:
-    common_qa:
-      edit: "Edit common question answer"
-      list: "Common question answer list"
-      create: "Create common question answer"
-    exchange:
-      list: "List exchanges"
-      detail: "Exchange detail"
-    kitty:
-      detail: "Kitty_detail"
-    login_history:
-      list: "List login histories"
-    news:
-      edit: "Edit news"
-      list: "List news"
-      create: "Create news"
-      detail: "News detai"
-    probability:
-      edit: "Edit probabilities"
-      detail: "Daily game bonus probability"
-    qa:
-      edit: "Edit question answer"
-      list: "List question answer"
     user:
       edit: "Edit user"
       list: "List users"
       create: "Create user"
+    pricing_play:
+      list: "List Pricing plays"
+    auction_item:
+      list: "List Auction items"
+      edit: "Edit Auction item"
+      create: "Create new Auction item"
+    charge_log:
+      list: "List Charge log"

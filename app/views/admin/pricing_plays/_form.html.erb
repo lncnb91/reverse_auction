@@ -1,0 +1,22 @@
+<%= form_for [:admin, @pricing_play], class: "form-horizontal", role:"form" do |f| %>
+  <div class="errors"><%= render partial: "errors", locals: { object: @pricing_play } %></div>
+  <table class="table table-bordered">
+    <tr>
+      <th width="100px"><%= f.label PricingPlay.h(:user_id) %></th>
+      <td width="200px">
+        <%= f.text_field :user_id, placeholder: PricingPlay.h(:user_id) %></td>
+    </tr>
+    <tr>
+      <th><%= f.label PricingPlay.h(:auction_item_id) %></th>
+      <td>
+        <%= f.text_field :auction_item_id, placeholder: PricingPlay.h(:auction_item_id) %></td>
+    </tr>
+    <tr>
+      <th><%= f.label PricingPlay.h(:set_price) %></th>
+      <td>
+        <%= f.text_field :set_price, placeholder: PricingPlay.h(:set_price) %></td>
+      </td>
+    </tr>
+  </table>
+  <%= f.submit class: "btn btn-success" %>
+<% end %>

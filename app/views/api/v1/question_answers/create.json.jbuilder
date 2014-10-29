@@ -1,1 +1,0 @@
-json.success Settings.success

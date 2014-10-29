@@ -1,0 +1,22 @@
+<%= form_for [:admin, @charge_log], class: "form-horizontal", role:"form" do |f| %>
+  <div class="errors"><%= render partial: "errors", locals: { object: @charge_log } %></div>
+  <table class="table table-bordered">
+    <tr>
+      <th width="100px"><%= f.label ChargeLog.h(:charged_at) %></th>
+      <td width="200px">
+        <%= f.text_field :created_at, placeholder: ChargeLog.h(:charged_at), class: "datetimepicker" %></td>
+    </tr>
+    <tr>
+      <th><%= f.label ChargeLog.h(:user_name) %></th>
+      <td>
+        <%= f.text_field :user_user_name, placeholder: ChargeLog.h(:user_name), class: "datetimepicker" %></td>
+    </tr>
+    <tr>
+      <th><%= f.label ChargeLog.h(:charged_gold) %></th>
+      <td>
+        <%= f.text_field :charged_gold, placeholder: ChargeLog.h(:charged_gold) %></td>
+      </td>
+    </tr>
+  </table>
+  <%= f.submit class: "btn btn-success" %>
+<% end %>

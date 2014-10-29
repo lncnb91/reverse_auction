@@ -2,9 +2,8 @@
   <div class="clear-both">
     <table class="table table-bordered table-search">
       <tr>
-        <th><%= User.h :media_user_info %></td>
-        <td><%= f.text_field :media_user_info_cont, placeholder: "Media user info", class: "search_input" %></td>
-        <%= hidden_field_tag :search_user, 1 %>
+        <th><%= User.h :user_name %></td>
+        <td><%= f.text_field :user_name_cont, placeholder: User.h(:user_name), class: "search_input" %></td>
       </tr>
       <tr>
         <td colspan="2" style="text-align: center;">
