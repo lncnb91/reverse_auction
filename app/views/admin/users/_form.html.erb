@@ -1,0 +1,22 @@
+<%= form_for [:admin, @user], class: "form-horizontal", role:"form" do |f| %>
+  <div class="errors"><%= render partial: "errors", locals: { object: @user } %></div>
+  <table class="table table-bordered">
+    <tr>
+      <th width="100px"><%= f.label User.h(:media_user_info) %></th>
+      <td width="200px">
+        <%= f.text_field :media_user_info, placeholder: User.h(:media_user_info) %></td>
+    </tr>
+    <tr>
+      <th><%= f.label User.h(:ad_id) %></th>
+      <td>
+        <%= f.text_field :ad_id, placeholder: User.h(:ad_id) %></td>
+    </tr>
+    <tr>
+      <th><%= f.label User.h(:device_type) %></th>
+      <td>
+        <%= f.text_field :device_type, placeholder: User.h(:device_type) %></td>
+      </td>
+    </tr>
+  </table>
+  <%= f.submit class: "btn btn-success" %>
+<% end %>

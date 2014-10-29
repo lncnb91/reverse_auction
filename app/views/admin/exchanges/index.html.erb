@@ -1,0 +1,25 @@
+<% provide(:title, (I18n.t :list, scope: [:page_title, :exchange])) %>
+<selection id="exchanges-index">
+  <table class = "table table-bordered">
+    <thead>
+      <tr>
+        <th><%= Exchange.h :created_at %></th>
+        <th><%= Exchange.h :user_id %></th>
+        <th><%= Exchange.h :gift_item_id %></th>
+        <th><%= Exchange.h :point %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @exchanges.each do |exchange| %>
+        <tr>
+          <td><%= link_to exchange.created_at, admin_exchange_path(exchange) %></td>
+          <td><%= link_to exchange.user.try(:email), admin_user_path(exchange.user) %></td>
+          <td><%= link_to exchange.gift_item.try(:name),
+           admin_gift_item_path(exchange.gift_item) if exchange.gift_item  %></td>
+          <td><%= exchange.point %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <div><%= paginate @exchanges %></div>
+</selection>

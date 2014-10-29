@@ -1,0 +1,20 @@
+<% provide(:title, (I18n.t :detail, scope: [:page_title, :probability])) %>
+<div>
+  <table class="table table-striped table-bordered table-hover table-responsive">
+    <tr class="success">
+      <th><%= Probability.h(:fail) %></th>
+      <th><%= Probability.h(:one_apple) %></th>
+      <th><%= Probability.h(:three_apple) %></th>
+      <th><%= Probability.h(:golden_apple) %></th>
+    </tr>
+    <tr>
+      <td><%= @probability.fail %></td>
+      <td><%= @probability.one_apple %></td>
+      <td><%= @probability.three_apple %></td>
+      <td><%= @probability.golden_apple %></td>
+    </tr>
+  </table>
+  <div>
+    <%= link_to I18n.t(:edit), edit_admin_probability_path(@probability), class: "btn btn-success" %>
+  </div>
+</div>

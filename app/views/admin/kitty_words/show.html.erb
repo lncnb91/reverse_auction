@@ -1,0 +1,31 @@
+<% provide(:title, I18n.t(:kitty_word_detail)) %>
+<selection id="kitty_words-show">
+  <table class = "table table-bordered table-form">
+    <tr>
+      <th><%= KittyWord.h :name %></th>
+      <td><%= @kitty_word.name %></td>
+    </tr>
+    <tr>
+      <th><%= KittyWord.h :word %></th>
+      <td><%= @kitty_word.word %></td>
+    </tr>
+    <tr>
+      <th><%= KittyWord.h :level %></th>
+      <td><%= @kitty_word.level %></td>
+    </tr>
+    <tr>
+      <th><%= KittyWord.h :memo %></th>
+      <td><%= raw @kitty_word.memo %></td>
+    </tr>
+    <tr>
+      <td colspan="2" style="text-align: center;">
+        <%=link_to "Edit", edit_admin_kitty_word_path(@kitty_word), class: "btn btn-success" %>
+        <%= link_to "Destroy",
+          admin_kitty_word_path(@kitty_word),
+          method: :delete,
+          data: {confirm: "Are you sure"}, class: "btn btn-danger" %>
+        <%=link_to "Back", admin_kitty_words_path, class: "btn btn-success" %>
+      </td>
+    </tr>
+  </table>
+</selection>

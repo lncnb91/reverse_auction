@@ -1,0 +1,31 @@
+<%= form_for [:admin, @kitty_word], class: "form-horizontal", role:"form" do |f| %>
+  <div class="well">
+    <div class="errors"><%= render partial: "errors", locals: { object: @kitty_word } %></div>
+    <table class="table table-bordered table-form">
+        <tr>
+          <th><%= f.label KittyWord.h(:name) %></td>
+          <td><%= f.text_field :name, class: "search_input", placeholder: KittyWord.h(:name) %></td>
+        </tr>
+        <tr>
+          <th><%= f.label KittyWord.h(:word), class: "col-md-1" %></th>
+          <td><%= f.text_field :word, class: "search_input", placeholder: KittyWord.h(:word) %></td>
+        </tr>
+        <tr>
+           <th><%= f.label KittyWord.h(:level) %></td>
+          <td><%= f.text_field :level, class: "search_input", placeholder: KittyWord.h(:level) %></td>
+        </tr>
+        <tr>
+           <th><%= f.label KittyWord.h(:memo) %></td>
+          <td><%= f.text_area :memo, class: "search_input" %></td>
+        </tr>
+        <tr>
+          <td colspan="2" style="text-align: center;">
+            <div class="form_btn">
+              <% button = @kitty_word.new_record? ? :create : :update %>
+              <%= f.submit t(button, scope: [:views, :labels]), class: "btn btn-success" %>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+<% end %>

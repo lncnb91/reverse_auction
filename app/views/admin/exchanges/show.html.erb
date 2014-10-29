@@ -1,0 +1,22 @@
+<% provide(:title, (I18n.t :detail, scope: [:page_title, :exchange])) %>
+<selection id="exchanges-show">
+  <table class = "table table-bordered">
+    <tr>
+      <td><%= Exchange.h :created_at %></td>
+      <td><%= @exchange.created_at %></td>
+    </tr>
+    <tr>
+      <td><%= Exchange.h :user_id %></td>
+      <td><%= link_to @exchange.user.try(:email), admin_user_path(@exchange.user) if @exchange.user %></td>
+    </tr>
+    <tr>
+      <td><%= Exchange.h :gift_item_id %></td>
+      <td><%= link_to @exchange.gift_item.try(:name),
+       admin_gift_item_path(@exchange.gift_item) if @exchange.gift_item %></td>
+    </tr>
+    <tr>
+      <th><%= Exchange.h :point %></th>
+      <td><%= @exchange.point %></td>
+    </tr>
+  </table>
+</selection>

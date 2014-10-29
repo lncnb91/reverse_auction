@@ -1,0 +1,50 @@
+en:
+  activemodel:
+    errors:
+  activerecord:
+    messages:
+      successful:
+        created: "%{model} created"
+        updated: "%{model} updated"
+    errors:
+      messages:
+        record_invalid: "Invalid record"
+    models:
+    attributes:
+      exchange:
+        user_id: "User"
+        gift_item_id: "Gift Item"
+        point: "Point"
+        created_at: "Created At"
+      kitty_word:
+        name: "Name"
+        level: "Level"
+        word: "Word"
+        memo: "Memo"
+      question_answer:
+        title: "Title"
+        question: "Question"
+        answer: "Answer"
+        common_asked: "Common asked"
+        answered: "Answered"
+        answer_question: "Answer this question"
+      user:
+        login: "LOGIN"
+        exchange: "EXCHANGE"
+        retrieve: "RETRIEVE"
+        ad_id: "Advertising ID"
+        media_user_info: "Media user info"
+        id: "ID"
+        device_type: "Device type"
+      login_history:
+        user_id: "User ID"
+        bonus: "Bonus"
+        login_date_time: "Login data time"
+      kitty:
+        sweets: "SWEETS"
+        invitation: "INVITATION"
+        progress: "PROGRESS"
+      common_question_answer:
+        title: "Title"
+        question: "Question"
+        answer: "Answer"

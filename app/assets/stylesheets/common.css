@@ -1,0 +1,73 @@
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  line-height: 1;
+  text-decoration: none;
+}
+#content {
+  margin-top: 40px;
+}
+
+.nav-list {
+  float:left;
+  font-size: 1.2em;
+}
+
+.column-head {
+  font-weight: bold;
+}
+
+.table {
+  text-align: center;
+}
+
+th {
+  text-align: center
+}
+
+label {
+  font-size: 1.2em;
+}
+.errors-msg {
+  color: red;
+}
+#wrap {
+  display: box;
+  width: 95%;
+  margin: 42px 1px 1px 50px;
+}
+.table-search th {
+  background-color: #DAECF5;
+  width: 100px;
+  text-align: center;
+}
+.table th {
+  background-color: #DAECF5;
+}
+.table-form {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.table-form th {
+  text-align:  center;
+}
+.search_input {
+  width: 90%;
+}
+.title {
+  text-align: center;
+}
+.errors {
+  margin-left: 10%;
+  margin-right: auto;
+}
+.table-exchange {
+  width: 60%;
+}

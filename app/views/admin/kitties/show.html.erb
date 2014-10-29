@@ -1,0 +1,63 @@
+<% provide (:title, (I18n.t :detail, scope: [:page_title, :kitty])) %>
+<div id="kitty-show">
+  <title> Kitty Detail </title>
+  <h3> Kitty Detail </h3>
+  <table class = "table table-bordered">
+    <tr>
+      <td><%= Kitty.h :id %></td>
+      <td><%= @kitty.id %></td>
+    </tr>
+    <tr>
+      <td><%= Kitty.h :user_id %></td>
+      <td><%= @kitty.user.email %></td>
+    </tr>
+    <tr>
+      <td><%= Kitty.h :level %></td>
+      <td><%= @kitty.level %></td>
+    </tr>
+    <tr>
+      <td><%= Kitty.h :progress %></td>
+      <td><%= @kitty.progress %></td>
+    </tr>
+    <tr>
+    <tr>
+      <td><%= Kitty.h :normal_apple %></td>
+      <td><%= @kitty.normal_apple %></td>
+    </tr>
+    <tr>
+      <td><%= Kitty.h :golden_apple %></td>
+      <td><%= @kitty.golden_apple %></td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <%=link_to "Edit", edit_admin_kitty_path(@kitty), class: "btn btn-success" %>
+        <%= link_to "Destroy",
+          admin_kitty_path(@kitty),
+          method: :delete,
+          data: {confirm: "Are you sure"}, class: "btn btn-danger" %>
+      </td>
+    </tr>
+  </table>
+</div>
+<div id="kitty-level-up-histories">
+  <h2>Level up histories</h2>
+  <table class="table table-striped table-bordered table-hover table-responsive">
+  <tr class="success">
+    <th><%= I18n.t(:id) %></th>
+    <th><%= LevelUpHistory.h :old_level %></th>
+    <th><%= LevelUpHistory.h :new_level %></th>
+    <th><%= LevelUpHistory.h :created_at %></th>
+    <th><%= LevelUpHistory.h :updated_at %></th>
+  </tr>
+  <% @kitty.level_up_histories.each do |history| %>
+    <tr>
+      <td><%= history.id %></td>
+      <td><%= history.old_level %></td>
+      <td><%= history.new_level %></td>
+      <td><%= history.created_at %></td>
+      <td><%= history.updated_at %></td>
+    </tr>
+  <% end %>
+  </table>
+</div>
+

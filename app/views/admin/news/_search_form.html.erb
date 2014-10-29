@@ -1,0 +1,25 @@
+<%= search_form_for @q, url: admin_news_index_path, class: "form-horizontal", role:"form" do |f| %>
+  <div class="clear-both">
+    <table class="table table-bordered table-search">
+      <tr>
+        <th><%= News.h :title %></td>
+        <td><%= f.text_field :title_cont, placeholder: News.h(:title), class: "search_input" %></td>
+      </tr>
+      <tr>
+        <th><%= News.h :public_from %></td>
+        <td><%= f.text_field :public_from_gteq, placeholder: News.h(:public_from), class: "search_input datetimepicker" %></td>
+      </tr>
+      <tr>
+        <th><%= News.h :public_until %></td>
+        <td><%= f.text_field :public_until_lteq, placeholder: News.h(:public_until), class: "search_input datetimepicker" %></td>
+      </tr>
+      <tr>
+        <td colspan="2" style="text-align: center;">
+          <div class="form_btn">
+            <%= f.submit "Search", class: "btn btn-success" %>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+<% end %>

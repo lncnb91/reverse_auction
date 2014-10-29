@@ -1,0 +1,14 @@
+success: 1
+api_keyword:
+  kitty:
+    update:
+      sweets: "SWEETS"
+      invitation: "INVITATION"
+      daily_game_bonus: "DAILY_GAME"
+    show:
+      sweets: "SWEETS"
+      progress: "PROGRESS"
+  user:
+    update:
+      exchange: "EXCHANGE"
+      retrieve: "RETRIEVE"
